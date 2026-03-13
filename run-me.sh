@@ -210,14 +210,23 @@ testa_final() {
 
 # ===== Ordem =====
 testa_execucao_questionario
+echo "" ; echo "Pressione enter para continuar.." ; read
 testa_requisitos
+echo "" ; echo "Pressione enter para continuar.." ; read
 testa_sistema
+echo "" ; echo "Pressione enter para continuar.." ; read
 testa_ssh
+echo "" ; echo "Pressione enter para continuar.." ; read
 testa_usuario_root
+echo "" ; echo "Pressione enter para continuar.." ; read
 testa_pacotes
+echo "" ; echo "Pressione enter para continuar.." ; read
 testa_arquivo
+echo "" ; echo "Pressione enter para continuar.." ; read
 testa_download
+echo "" ; echo "Pressione enter para continuar.." ; read
 testa_pasta
+echo "" ; echo "Pressione enter para continuar.." ; read
 testa_final
 
 # ===== Pausa, limpar e resumo =====
