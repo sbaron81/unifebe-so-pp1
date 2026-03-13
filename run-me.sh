@@ -247,5 +247,5 @@ echo "Final     $RES_FINAL"
 echo "" ; echo "Pressione enter para finalizar.." ; read
 clear
 if command -v cowsay >/dev/null 2>&1; then
-  cowsay "Até a próxima!"
+  /usr/games/cowsay "Até a próxima!"
 fi
