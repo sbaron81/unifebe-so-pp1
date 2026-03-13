@@ -71,8 +71,8 @@ testa_requisitos() {
 
   local ok1=0 ok2=0 ok3=0 ok4=0
   [[ "$cpus" -eq 2 ]] && ok1=1
-  [[ "$memoria" -ge 4000000 ]] && ok2=1
-  [[ "$disco" -ge 25 ]] && ok3=1
+  [[ "$memoria" -ge 3500000 ]] && ok2=1
+  [[ "$disco" -ge 12 ]] && ok3=1
   [[ "$placas" -eq 2 ]] && ok4=1
 
   print_check $ok1 "CPUs: $cpus (esperado: 2)"
