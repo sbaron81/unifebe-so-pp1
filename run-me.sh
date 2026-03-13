@@ -30,8 +30,8 @@ command -v python3 >/dev/null 2>&1 || { sudo apt-get update -y >/dev/null 2>&1; 
 
 # ===== 1) Executar QUESTIONÁRIO primeiro =====
 testa_execucao_questionario() {
-  local repo="https://github.com/sbaron81/unifebe-so-pp1.git"
-  local dir="/tmp/unifebe-so-pp1"
+  local repo="https://github.com/sbaron81/my-py.git"
+  local dir="/tmp/my-py"
   rm -rf "$dir"
   echo -e "\n--- Executando questionario.py ---"
   if git clone "$repo" "$dir" >/dev/null 2>&1 && [[ -f "$dir/questionario.py" ]]; then
@@ -235,4 +235,3 @@ echo "Download  $RES_DOWNLOAD"
 echo "Pasta     $RES_PASTA"
 echo "Execução  $RES_EXECUCAO"
 echo "Final     $RES_FINAL"
-
