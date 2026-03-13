@@ -102,7 +102,7 @@ testa_sistema() {
   [[ "$teclado" == "br" ]] && ok2=1
   [[ "$dhcp_count" -ge 2 ]] && ok3=1
   [[ $usuario_existe -eq 1 ]] && ok4=1
-  [[ "$hostname" == "ubuntu" ]] && ok5=1
+  [[ "$hostname" == "unifebe" ]] && ok5=1
   [[ $openssh_instalado -eq 1 ]] && ok6=1
 
   print_check $ok1 "Idioma: $idioma (esperado: C.UTF-8)"
