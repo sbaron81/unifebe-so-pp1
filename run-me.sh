@@ -95,7 +95,7 @@ testa_sistema() {
   dhcp_count=$(ip address | grep -c ' dynamic ')
   hostname=$(hostname)
   dpkg -l | grep -q '^ii  openssh-server' && openssh_instalado=1 || openssh_instalado=0
-  getent passwd ubuntu >/dev/null 2>&1 && usuario_existe=1 || usuario_existe=0
+  getent passwd unifebe >/dev/null 2>&1 && usuario_existe=1 || usuario_existe=0
 
   local ok1=0 ok2=0 ok3=0 ok4=0 ok5=0 ok6=0
   [[ "$idioma" == "C.UTF-8" ]] && ok1=1
@@ -108,8 +108,8 @@ testa_sistema() {
   print_check $ok1 "Idioma: $idioma (esperado: C.UTF-8)"
   print_check $ok2 "Layout de teclado: ${teclado:-indefinido} (esperado: br)"
   print_check $ok3 "DHCP em >= 2 interfaces (detectado: $dhcp_count)"
-  print_check $ok4 "Usuário 'ubuntu' existente"
-  print_check $ok5 "Hostname: $hostname (esperado: ubuntu)"
+  print_check $ok4 "Usuário 'unifebe' existente "
+  print_check $ok5 "Hostname: $hostname (esperado: unifebe)"
   print_check $ok6 "OpenSSH Server instalado"
 
   (( ok1 & ok2 & ok3 & ok4 & ok5 & ok6 )) || ok_all=0
