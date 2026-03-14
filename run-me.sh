@@ -150,7 +150,7 @@ testa_arquivo() {
   echo -e "\n--- Arquivo ---"
   local arq="/root/alunos.txt"
   if [[ -f "$arq" ]]; then
-    local linhas; linhas=$(wc -l | awk '{print $1}' < "$arq")
+    local linhas=0; linhas=$(cat "$arq" | wc -l)
     if [[ "$linhas" -ge 1 ]]; then
       print_ok "$arq existe (linhas: $linhas)"
       RES_ARQUIVO="$PASS_TEXT"
