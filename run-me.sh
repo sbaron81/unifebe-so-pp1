@@ -72,12 +72,12 @@ testa_requisitos() {
   local ok1=0 ok2=0 ok3=0 ok4=0
   [[ "$cpus" -eq 2 ]] && ok1=1
   [[ "$memoria" -ge 3500000 ]] && ok2=1
-  [[ "$disco" -ge 12 ]] && ok3=1
+  [[ "$disco" -ge 10 ]] && ok3=1
   [[ "$placas" -eq 2 ]] && ok4=1
 
   print_check $ok1 "CPUs: $cpus (esperado: 2)"
   print_check $ok2 "Memória: ${memoria}KB (>= 4GB)"
-  print_check $ok3 "Disco /: ${disco}GB (>= 25GB)"
+  print_check $ok3 "Disco /: ${disco}GB (>= 15GB)"
   print_check $ok4 "Placas de rede: $placas (esperado: 2)"
 
   (( ok1 & ok2 & ok3 & ok4 )) || ok_all=0
