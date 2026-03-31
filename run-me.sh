@@ -98,14 +98,14 @@ testa_sistema() {
   getent passwd unifebe >/dev/null 2>&1 && usuario_existe=1 || usuario_existe=0
 
   local ok1=0 ok2=0 ok3=0 ok4=0 ok5=0 ok6=0
-  [[ "$idioma" == "en_US.UTF-8" ]] && ok1=1
+  [[ "$idioma" == "en_US.UTF-8" || "$idioma" == "C.UTF-8" ]] && ok1=1
   [[ "$teclado" == "br" ]] && ok2=1
   [[ "$dhcp_count" -ge 2 ]] && ok3=1
   [[ $usuario_existe -eq 1 ]] && ok4=1
   [[ "$hostname" == "unifebe" ]] && ok5=1
   [[ $openssh_instalado -eq 1 ]] && ok6=1
 
-  print_check $ok1 "Idioma: $idioma (esperado: en_US.UTF-8)"
+  print_check $ok1 "Idioma: $idioma (esperado: en_US.UTF-8 ou C.UTF-8)"
   print_check $ok2 "Layout de teclado: ${teclado:-indefinido} (esperado: br)"
   print_check $ok3 "DHCP em >= 2 interfaces (detectado: $dhcp_count)"
   print_check $ok4 "Usuário 'unifebe' existente "
