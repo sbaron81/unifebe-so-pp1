@@ -77,7 +77,7 @@ testa_requisitos() {
 
   print_check $ok1 "CPUs: $cpus (esperado: 2)"
   print_check $ok2 "Memória: ${memoria}KB (>= 4GB)"
-  print_check $ok3 "Disco /: ${disco}GB (>= 15GB)"
+  print_check $ok3 "Disco /: ${disco}GB (>= 10GB)"
   print_check $ok4 "Placas de rede: $placas (esperado: 2)"
 
   (( ok1 & ok2 & ok3 & ok4 )) || ok_all=0
